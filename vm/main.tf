@@ -39,7 +39,7 @@ resource "aws_security_group" "ec2_sg" {
 # 🖥️ EC2 Instance
 resource "aws_instance" "github_runner" {
   ami           = data.aws_ami.ubuntu.id
-  instance_type = "t3.large"
+  instance_type = "t2.medium"
 
   key_name = "vpc-peering-demo-east-1"
 

@@ -4,4 +4,4 @@
 .terraform/
 terraform.tfvars
 crash.log
-readme.md
+personal.md
