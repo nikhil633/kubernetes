@@ -18,13 +18,9 @@ Signed-By: /etc/apt/keyrings/docker.asc
 EOF
 
 sudo apt update
-
 sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-
 sudo systemctl status docker
-
 sudo systemctl start docker
-
 sudo docker run hello-world
 
 
@@ -32,10 +28,18 @@ sudo apt update
 sudo apt install -y docker.io
 sudo systemctl enable docker
 sudo systemctl start docker
+curl -LO https://github.com/kubernetes/minikube/releases/latest/download/minikube-linux-amd64
+sudo install minikube-linux-amd64 /usr/local/bin/minikube && rm minikube-linux-amd64
 
-18  curl -LO https://github.com/kubernetes/minikube/releases/latest/download/minikube-linux-amd64
-   19  sudo install minikube-linux-amd64 /usr/local/bin/minikube && rm minikube-linux-amd64
-   20  sudo apt update
+alias k="minikube kubectl --"
+alias kubectl="minikube kubectl --"
+
+
+minikube delete
+minikube start --nodes 2 --memory 4096 --cpus 4
+
+
+20  sudo apt update
    21  minikube start
    22  sudo apt update
    23  sudo apt install -y docker.io

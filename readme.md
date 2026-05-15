@@ -29,7 +29,7 @@ az aks stop --resource-group nikhil-AKS --name nikhil-AKS
 az aks start --resource-group nikhil-AKS --name nikhil-AKS
 
 
-
+---------------------k3s install----------------------------------------
 
 sudo apt update && sudo apt upgrade -y
 curl -sfL https://get.k3s.io | sh -

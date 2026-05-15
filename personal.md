@@ -1,1 +1,1 @@
-ssh -i nikhil-vm_key.pem azureuser@4.224
+ssh nikhil@20.244.26.108
