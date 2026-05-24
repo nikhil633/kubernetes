@@ -39,13 +39,9 @@ minikube delete
 minikube start --nodes 2 --memory 4096 --cpus 4
 
 
-20  sudo apt update
-   21  minikube start
-   22  sudo apt update
    23  sudo apt install -y docker.io
    24  sudo systemctl enable docker
    25  sudo systemctl start docker
-   26  docker --version
    27  sudo usermod -aG docker nikhil
    28  minikube start --driver=docker
    29  kubectl get pods
@@ -86,3 +82,17 @@ minikube start --nodes 2 --memory 4096 --cpus 4
    64  sudo snap install kubectl --classic
    65  kubectl version --client
    66  kubectl get pods
+
+
+
+   k api-resources --namespace=false
+
+   k api-resources --namespace=true
+
+   k get clusterrole
+
+   k describe clusterrole/system:node
+
+   k get sa -A |grep default
+
+   

@@ -18,6 +18,11 @@ az vm start --resource-group vm --name nikhil-vm
 
 az vm stop --resource-group vm --name nikhil-vm
 
+
+az vm start --resource-group vm --name nikhil-vm-temp
+
+az vm stop --resource-group vm --name nikhil-vm-temp
+
 az vm deallocate --resource-group vm --name nikhil-vm
 
 az vm restart --resource-group vm --name nikhil-vm
@@ -27,6 +32,14 @@ az aks list -o table
 az aks stop --resource-group nikhil-AKS --name nikhil-AKS
 
 az aks start --resource-group nikhil-AKS --name nikhil-AKS
+
+
+sudo ./svc.sh install
+
+sudo ./svc.sh start
+
+sudo ./svc.sh status
+
 
 
 ---------------------k3s install----------------------------------------
