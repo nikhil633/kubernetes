@@ -17,3 +17,7 @@ ps -ef |grep kubelet
 
 kubectl taint node worker-name gpu:true:NoSchedule
 
+
+
+servicemesh and istio --->
+
